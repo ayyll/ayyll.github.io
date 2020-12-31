@@ -15,13 +15,13 @@
 <meta property="og:site_name" content="Mr.yang">
 <meta property="og:description" content="题目传送门：寄居蟹与海葵 题意：寄居蟹与海葵是一对合作互助的共栖伙伴。海葵是寄居蟹最称职的门卫。它用有毒的触角去蜇那些敢来靠近它们的所有动物，保护寄居蟹。而寄居蟹则背着行动困难的海葵，四出觅食，有福同享。但并不是所有寄居蟹和海葵都可以做搭档的。那就要看海葵的身体是不是符合寄居蟹的螺壳。海葵的身体是有褶皱的，而寄居蟹的螺壳同样凹凸不平，我们可以用一个大写字母组成的字符串来表示它们的高低程度，其中A代">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://www.ayyll.com/2017/03/09/%E5%AD%97%E7%AC%A6%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/%E5%AD%97%E7%AC%A6%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/1.png">
+<meta property="og:image" content="http://www.ayyll.com/.com//1.png">
 <meta property="article:published_time" content="2017-03-09T11:47:27.000Z">
 <meta property="article:modified_time" content="2020-12-31T05:03:05.866Z">
 <meta property="article:author" content="yh">
 <meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://www.ayyll.com/2017/03/09/%E5%AD%97%E7%AC%A6%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/%E5%AD%97%E7%AC%A6%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/1.png">
+<meta name="twitter:image" content="http://www.ayyll.com/.com//1.png">
   
     <link rel="alternative" href="/atom.xml" title="Mr.yang" type="application/atom+xml">
   
@@ -170,7 +170,7 @@
 <a id="more"></a>
 
 <p>A不动了。。这么简单的水题，还是看了解题报告，放下两年多了，脑子转不动了。</p>
-<p>看题，有点贪心的味道，只要让子串t顺序匹配上面的串s即可，s匹配t和t匹配s皆可，一开始想的有点乱，看图：<br><img src="%E5%AD%97%E7%AC%A6%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/1.png" alt="1"></p>
+<p>看题，有点贪心的味道，只要让子串t顺序匹配上面的串s即可，s匹配t和t匹配s皆可，一开始想的有点乱，看图：<br><img src="/.com//1.png" alt="1"></p>
 <p>上图是遍历t串，依次匹配s串，如果扫到s串尾部都没匹配到就可以break出来，做个标记匹配失败。否则匹配成功。<br>代码如下:</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">void</span> <span class="function"><span class="title">main</span>(<span class="params"><span class="built_in">String</span>[] args</span>)</span> &#123;</span><br><span class="line">		Scanner <span class="keyword">in</span> = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="built_in">String</span> s,t;</span><br><span class="line">		<span class="keyword">while</span>(<span class="keyword">in</span>.hasNext()) &#123;</span><br><span class="line">			s = <span class="keyword">in</span>.next();</span><br><span class="line">			t = <span class="keyword">in</span>.next();</span><br><span class="line">			<span class="keyword">if</span>(s.equals(<span class="string">&quot;0&quot;</span>) &amp;&amp; t.equals(<span class="string">&quot;0&quot;</span>))<span class="keyword">break</span>;</span><br><span class="line">			solve(s,t);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">void</span> <span class="function"><span class="title">solve</span>(<span class="params"><span class="built_in">String</span> s, <span class="built_in">String</span> t</span>)</span> &#123;</span><br><span class="line">		</span><br><span class="line">		int slen = s.length(),tlen = t.length();</span><br><span class="line">		<span class="keyword">if</span>(slen &lt; tlen) &#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;No&quot;</span>);</span><br><span class="line">			<span class="keyword">return</span> ;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			int i,j = <span class="number">0</span>;</span><br><span class="line">			<span class="built_in">boolean</span> flag = <span class="literal">true</span>;</span><br><span class="line">			<span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; tlen; i++,j++) &#123;</span><br><span class="line">				<span class="keyword">while</span>(j &lt; slen &amp;&amp; (t.charAt(i) - <span class="string">&#x27;A&#x27;</span>) + (s.charAt(j) - <span class="string">&#x27;A&#x27;</span>) != <span class="number">25</span>)</span><br><span class="line">					j++;</span><br><span class="line">				<span class="keyword">if</span>(j == slen) &#123;</span><br><span class="line">					flag = <span class="literal">false</span>;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(!flag) System.out.println(<span class="string">&quot;No&quot;</span>);</span><br><span class="line">			<span class="keyword">else</span> System.out.println(<span class="string">&quot;Yes&quot;</span>);</span><br><span class="line">		&#125;	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>网上还有一种遍历s的写法。。个人感觉更简单点(这代码风格有我当年的风范~)</p>
@@ -394,11 +394,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -410,15 +410,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Ruby</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -442,11 +442,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">

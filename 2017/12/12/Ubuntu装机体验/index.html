@@ -15,13 +15,13 @@
 <meta property="og:site_name" content="Mr.yang">
 <meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;虽然以前也有开Linux的专业课，自己也算轻度Linux用户，曾经还给sbc在实验室给50多台电脑装了ubuntu，似乎有些东西总是留不住，学了忘已然是一种常态。好在，从大一就被刘晓红老师教着写博客，虽然脑子里留不住东西，勉强还能记录些许文字聊以慰藉。 仅以本文记录Ubuntu使用过程中的一些经验(坑)。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://www.ayyll.com/Ubuntu%E8%A3%85%E6%9C%BA%E4%BD%93%E9%AA%8C/%E7%BB%88%E7%AB%AF%E9%85%8D%E8%89%B2.png">
+<meta property="og:image" content="http://www.ayyll.com/.com//%E7%BB%88%E7%AB%AF%E9%85%8D%E8%89%B2.png">
 <meta property="article:published_time" content="2017-12-12T06:38:37.000Z">
 <meta property="article:modified_time" content="2020-12-31T05:03:05.835Z">
 <meta property="article:author" content="yh">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://www.ayyll.com/Ubuntu%E8%A3%85%E6%9C%BA%E4%BD%93%E9%AA%8C/%E7%BB%88%E7%AB%AF%E9%85%8D%E8%89%B2.png">
+<meta name="twitter:image" content="http://www.ayyll.com/.com//%E7%BB%88%E7%AB%AF%E9%85%8D%E8%89%B2.png">
   
     <link rel="alternative" href="/atom.xml" title="Mr.yang" type="application/atom+xml">
   
@@ -189,7 +189,7 @@
 <h1 id="终端配色方案"><a href="#终端配色方案" class="headerlink" title="终端配色方案"></a>终端配色方案</h1><p>在Linux下面估计用的所有东西属终端最多了，所以你有必要把她搞的Beautiful一点。<br>在终端中打开.bashrc文件：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">gedit</span> ~/<span class="selector-class">.bashrc</span></span><br></pre></td></tr></table></figure>
 <p>会弹出一个编辑文本，在<strong>文本的最下方</strong>添加如下代码：<br><code>PS1=&#39;$&#123;debian_chroot:+($debian_chroot)&#125;\[\033[01;35;01m\]\u\[\033[00;00;01m\]@\[\033[01;35;01m\]\h\[\033[00;31;01m\]:\[\033[00;00;01m\]\w \[\033[01;32;01m\]\$ \[\033[01;01;01m\]&#39;</code></p>
-<p>保存退出，重启终端，会发现配色方案已经变了。变得很酷，就像下图：<br><img src="/Ubuntu%E8%A3%85%E6%9C%BA%E4%BD%93%E9%AA%8C/%E7%BB%88%E7%AB%AF%E9%85%8D%E8%89%B2.png" alt="终端配色"></p>
+<p>保存退出，重启终端，会发现配色方案已经变了。变得很酷，就像下图：<br><img src="/.com//%E7%BB%88%E7%AB%AF%E9%85%8D%E8%89%B2.png" alt="终端配色"></p>
 <h1 id="终端启动位置"><a href="#终端启动位置" class="headerlink" title="终端启动位置"></a>终端启动位置</h1><p>终端你肯定经常用，大体有两种打开方式，要么固定到桌面快捷方式通过鼠标单击打开，要么使用默认的快捷键 Ctrl + Alt + T打开，但是每次打开都是在左上角或者右下角什么的，反正不是自己想要的位置。然后每次都要手动拖到自己想要的位置，久而久之就会烦了。</p>
 <p>那么可以通过修改配置文件解决这个问题，首先打开终端，将终端调整到你想要的位置，然后输入<code>xwininfo</code>命令，然后点击终端窗口里的任意一个位置，会看到最下面有一行：</p>
 <figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-geometry 80x24<span class="string">+420</span><span class="string">+207</span></span><br></pre></td></tr></table></figure>
@@ -418,11 +418,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -434,15 +434,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Ruby</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -466,11 +466,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">

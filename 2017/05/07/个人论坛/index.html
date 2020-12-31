@@ -15,15 +15,15 @@
 <meta property="og:site_name" content="Mr.yang">
 <meta property="og:description" content="本项目fork自https:&#x2F;&#x2F;github.com&#x2F;Lutils&#x2F;MyForum 额，虽然是fork。。但我不怎么会pull request，所以实际上应该是copy，然后修改了一下，希望原作者勿怪。。顾名思义，论坛就是那种论坛，注册，登陆，发帖，回帖，加精置顶(后台功能)..等等，(后来加了一个等级制度)。 演示地址:个人论坛">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://www.ayyll.com/2017/05/07/%E4%B8%AA%E4%BA%BA%E8%AE%BA%E5%9D%9B/%E4%B8%AA%E4%BA%BA%E8%AE%BA%E5%9D%9B/1.png">
-<meta property="og:image" content="http://www.ayyll.com/2017/05/07/%E4%B8%AA%E4%BA%BA%E8%AE%BA%E5%9D%9B/%E4%B8%AA%E4%BA%BA%E8%AE%BA%E5%9D%9B/2.png">
-<meta property="og:image" content="http://www.ayyll.com/2017/05/07/%E4%B8%AA%E4%BA%BA%E8%AE%BA%E5%9D%9B/%E4%B8%AA%E4%BA%BA%E8%AE%BA%E5%9D%9B/3.png">
+<meta property="og:image" content="http://www.ayyll.com/.com//1.png">
+<meta property="og:image" content="http://www.ayyll.com/.com//2.png">
+<meta property="og:image" content="http://www.ayyll.com/.com//3.png">
 <meta property="article:published_time" content="2017-05-07T02:59:17.000Z">
 <meta property="article:modified_time" content="2020-12-31T05:03:05.864Z">
 <meta property="article:author" content="yh">
 <meta property="article:tag" content="项目">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://www.ayyll.com/2017/05/07/%E4%B8%AA%E4%BA%BA%E8%AE%BA%E5%9D%9B/%E4%B8%AA%E4%BA%BA%E8%AE%BA%E5%9D%9B/1.png">
+<meta name="twitter:image" content="http://www.ayyll.com/.com//1.png">
   
     <link rel="alternative" href="/atom.xml" title="Mr.yang" type="application/atom+xml">
   
@@ -173,16 +173,16 @@
 <a id="more"></a>
 
 <h1 id="设计分析"><a href="#设计分析" class="headerlink" title="设计分析"></a>设计分析</h1><h2 id="user表"><a href="#user表" class="headerlink" title="user表"></a>user表</h2><p>数据库总体设计4张表，一张user表，存用户信息，字段信息如下：</p>
-<p><img src="%E4%B8%AA%E4%BA%BA%E8%AE%BA%E5%9D%9B/1.png" alt="1"></p>
+<p><img src="/.com//1.png" alt="1"></p>
 <p>密码md5加密，头像上传到服务器存url，文件上传的时候有个小bug就是原作者是把头像上传到服务器下\resources\upload目录下，但是如果你拷贝这个项目服务器是没有这个目录的，so，上传的时候会报错，可以加上下面这句判断：</p>
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">File</span> tem = <span class="keyword">new</span> <span class="built_in">File</span>(filePath);</span><br><span class="line">	<span class="keyword">if</span>(!tem.<span class="built_in">exists</span>()) &#123;</span><br><span class="line">		tem.mkdirs();</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
 <p>上传头像时候还有一个bug就是Google Chrome浏览器点击 input file上传按钮时延迟3-5秒，当然这里主要是谷歌的问题，恩。。具体点应该是墙的问题，解决方法：<a target="_blank" rel="noopener" href="http://www.piaoyi.org/computer/Google-Chrome-input-file-delay-3-5.html">传送门</a></p>
 <p>user表后来我加了3个字段，分别代表等级，经验值，和对应的头衔。经验值初始为0，每20升一级(共18级)，发帖+5，回帖+3，楼中楼回复+2，并没有写互动。。就是别人回复你的帖子你并不会收益，理论上应该有收益的</p>
 <h2 id="article表"><a href="#article表" class="headerlink" title="article表"></a>article表</h2><p>article表存帖子信息，具体字段如下：</p>
-<p><img src="%E4%B8%AA%E4%BA%BA%E8%AE%BA%E5%9D%9B/2.png" alt="2"></p>
+<p><img src="/.com//2.png" alt="2"></p>
 <p>title是标题，lable是帖子标签，content为帖子内容，即所谓的1楼(0楼),uid为外键(用户id)，关联user表，status为状态，0、普通 1、置顶 2、加精:3、加精且置顶<br><strong>这样的话前端(后台管理界面)可以只给两个按钮，一个加精一个置顶，在原帖status的基础值上加1或加2就可以了。</strong></p>
 <h2 id="comment表"><a href="#comment表" class="headerlink" title="comment表"></a>comment表</h2><p>comment表存评论信息，具体字段如下：</p>
-<p><img src="%E4%B8%AA%E4%BA%BA%E8%AE%BA%E5%9D%9B/3.png" alt="3"></p>
+<p><img src="/.com//3.png" alt="3"></p>
 <p>这张表比较简单，除了存评论内容，就是两个外键，uid(用户id),aid(帖子id),其他的没什么了。楼中楼同理，只不过还要多一个外键cid(评论id)，这里就不贴出来了。<strong>楼中楼并没有分页展示，回复多了的话显得很长。。后期可以加上分页</strong></p>
 <h1 id="文本编辑器"><a href="#文本编辑器" class="headerlink" title="文本编辑器"></a>文本编辑器</h1><p><a target="_blank" rel="noopener" href="https://github.com/wangfupeng1988/wangEditor">wangEditor</a>——轻量级web富文本编辑器，配置方便，使用简单。支持IE8+浏览器。<br>引用wangEditor.css、jquery.js和wangEditor.js之后，即可简单生成富文本编辑器，简单易用。</p>
 <p>官方demo：</p>
@@ -408,11 +408,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -424,15 +424,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Ruby</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -456,11 +456,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">

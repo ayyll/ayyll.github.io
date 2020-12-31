@@ -15,13 +15,13 @@
 <meta property="og:site_name" content="Mr.yang">
 <meta property="og:description" content="遥想上上个星期看spring的时候一头雾水，总看到网上有人说SSH不行啦，直接学SSM就完了嘛。。于是我一头扎进spring，嗯。。淹死了。机智如我又投向了struts2的怀抱，看了几天struts2后决定找个小项目边做边学，跟着慕课网上的老师就开始做一个学生信息管理系统。一开始还好，做到前端的时候那老师直接把写好的页面(html+css+js写的)放出来，然而我对这种原生网页并不感冒，实际上是前">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://www.ayyll.com/2017/03/19/%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/1.png">
+<meta property="og:image" content="http://www.ayyll.com/.com//1.png">
 <meta property="article:published_time" content="2017-03-19T02:31:55.000Z">
 <meta property="article:modified_time" content="2020-12-31T05:03:05.868Z">
 <meta property="article:author" content="yh">
 <meta property="article:tag" content="项目">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://www.ayyll.com/2017/03/19/%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/1.png">
+<meta name="twitter:image" content="http://www.ayyll.com/.com//1.png">
   
     <link rel="alternative" href="/atom.xml" title="Mr.yang" type="application/atom+xml">
   
@@ -168,7 +168,7 @@
         <p>遥想上上个星期看spring的时候一头雾水，总看到网上有人说SSH不行啦，直接学SSM就完了嘛。。于是我一头扎进spring，嗯。。淹死了。机智如我又投向了struts2的怀抱，看了几天struts2后决定找个小项目边做边学，跟着<a target="_blank" rel="noopener" href="http://www.imooc.com/learn/466">慕课网</a>上的老师就开始做一个学生信息管理系统。一开始还好，做到前端的时候那老师直接把写好的页面(html+css+js写的)放出来，然而我对这种原生网页并不感冒，实际上是前端功底太差。。搜了几天勉强上手了<a target="_blank" rel="noopener" href="http://v3.bootcss.com/">bootstrap</a>，虽然框架源码并看懂，但秉着不重复造轮子的原则(码农的自我麻醉)依旧copy的风生水起~<br>由于做这个项目中遇到的一些问题以及一些模块的实现之前都有写博客记录，所以本文只讲项目的整体结构以及本渣对框架的理解。</p>
 <a id="more"></a>
 
-<h1 id="总体结构"><a href="#总体结构" class="headerlink" title="总体结构"></a>总体结构</h1><p>本系统采用MVC开发模式开发，数据库用的Mysql，持久化层采用Hibernate框架，struts2充当控制器，前端框架bootstrap。项目整体结构图：<br><img src="%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/1.png" alt="1"></p>
+<h1 id="总体结构"><a href="#总体结构" class="headerlink" title="总体结构"></a>总体结构</h1><p>本系统采用MVC开发模式开发，数据库用的Mysql，持久化层采用Hibernate框架，struts2充当控制器，前端框架bootstrap。项目整体结构图：<br><img src="/.com//1.png" alt="1"></p>
 <p>entity包下两个实体类：用户类和学生类，然后分别在数据库中建相应的表，有两种方式，可以在数据库中先建表然后Hibernate生成实体类，反之也可以。</p>
 <p>db包放的是连接数据库的一个工具包(HibernateSessionFactory.java)，我们可以自己实现，也可以选择MyEclipse生成。</p>
 <p>然后写业务逻辑(service/service.impl)，简单点说就是增删查改，<strong>这部分就是我们接收到控制层转发过来的请求然后和数据库打交道实现前端的请求，完成之后返回给控制层。</strong></p>
@@ -414,11 +414,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -430,15 +430,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Ruby</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -462,11 +462,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">

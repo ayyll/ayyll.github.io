@@ -15,13 +15,13 @@
 <meta property="og:site_name" content="Mr.yang">
 <meta property="og:description" content="题目传送门:Keyboard Row 题意：键盘上的字母分为3行，给出一串单词，要求出只由键盘上同一行字母组成的单词。比如Input: [“Hello”, “Alaska”, “Dad”, “Peace”]Output: [“Alaska”, “Dad”] 思路:一开始想着暴力判断一下， 往下拉了一下leetcode上有一个黄色的按钮叫Show Tags,好奇心下点了一下。。弹出来一个Hash T">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://www.ayyll.com/2017/05/09/leetcode500/leetcode500/keyboard.png">
+<meta property="og:image" content="http://www.ayyll.com/.com//keyboard.png">
 <meta property="article:published_time" content="2017-05-09T09:10:58.000Z">
 <meta property="article:modified_time" content="2020-12-31T05:03:05.852Z">
 <meta property="article:author" content="yh">
 <meta property="article:tag" content="leetcode">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://www.ayyll.com/2017/05/09/leetcode500/leetcode500/keyboard.png">
+<meta name="twitter:image" content="http://www.ayyll.com/.com//keyboard.png">
   
     <link rel="alternative" href="/atom.xml" title="Mr.yang" type="application/atom+xml">
   
@@ -171,7 +171,7 @@
 <a id="more"></a>
 
 <p>题目描述：<br>Given a List of words, return the words that can be typed using letters of alphabet on only one row’s of American keyboard like the image below.</p>
-<p><img src="leetcode500/keyboard.png" alt="keyboard"></p>
+<p><img src="/.com//keyboard.png" alt="keyboard"></p>
 <p><strong>Example 1:</strong><br>Input: [“Hello”, “Alaska”, “Dad”, “Peace”]<br>Output: [“Alaska”, “Dad”]<br><strong>Note:</strong><br>1.You may use one character in the keyboard more than once.<br>2.You may assume the input string will only contain letters of alphabet.</p>
 <p>java代码:注意大小写，验证的时候忽略大小写即可。注意边界大小写，首字母忘了转大写，WA了一次。</p>
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">String</span>[] findWords(<span class="keyword">String</span>[] words) &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span>[] hash_table = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">150</span>];</span><br><span class="line">        <span class="keyword">String</span>[] row = &#123;<span class="string">&quot;QWERTYUIOP&quot;</span>,<span class="string">&quot;ASDFGHJKL&quot;</span>,<span class="string">&quot;ZXCVBNM&quot;</span>&#125;;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; row[i].length(); j++) &#123;</span><br><span class="line">                hash_table[(<span class="keyword">int</span>)row[i].charAt(j)] = i + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        List&lt;<span class="keyword">String</span>&gt; <span class="built_in">list</span> = <span class="keyword">new</span> ArrayList&lt;<span class="keyword">String</span>&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; words.length; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> tem = hash_table[(<span class="keyword">int</span>)words[i].charAt(<span class="number">0</span>)];</span><br><span class="line">            <span class="keyword">if</span>(tem == <span class="number">0</span>)tem = hash_table[(<span class="keyword">int</span>) words[i].charAt(<span class="number">0</span>) - <span class="number">32</span>];</span><br><span class="line">            <span class="keyword">boolean</span> flag = <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; words[i].length(); j++) &#123;</span><br><span class="line">                <span class="keyword">int</span> index = (<span class="keyword">int</span>)words[i].charAt(j);</span><br><span class="line">                <span class="comment">//忽略大小写</span></span><br><span class="line">                <span class="keyword">if</span>(hash_table[index] == <span class="number">0</span>)&#123;</span><br><span class="line">                    index -= <span class="number">32</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(hash_table[index] != tem) &#123;</span><br><span class="line">                    flag = <span class="literal">false</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(flag) &#123;</span><br><span class="line">                <span class="built_in">list</span>.add(words[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">String</span>[] ans = <span class="keyword">new</span> <span class="keyword">String</span>[<span class="built_in">list</span>.<span class="built_in">size</span>()];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ans.length; i++) &#123;</span><br><span class="line">            ans[i] = <span class="built_in">list</span>.<span class="built_in">get</span>(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -394,11 +394,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -410,15 +410,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Ruby</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -442,11 +442,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
