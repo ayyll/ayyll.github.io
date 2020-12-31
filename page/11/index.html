@@ -143,165 +143,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Hibernate查询报错" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/10/Hibernate%E6%9F%A5%E8%AF%A2%E6%8A%A5%E9%94%99/">Hibernate查询报错</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/10/Hibernate%E6%9F%A5%E8%AF%A2%E6%8A%A5%E9%94%99/" class="archive-article-date">
-  	<time datetime="2017-03-10T13:32:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近几天做一个学生管理系统，可谓是路途艰难。。一开始配Hibernate，配好之后整合struts2，扒了别人一个前端的登陆页面，在登陆验证的时候卡住了，本来是登陆表单提交后，转到action层在转到dao层时执行数据库查询抛出如下异常：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">java<span class="selector-class">.lang</span><span class="selector-class">.reflect</span>.UndeclaredThrowableException</span><br><span class="line">    at com<span class="selector-class">.sun</span><span class="selector-class">.proxy</span>.<span class="variable">$Proxy22</span>.createQuery(Unknown Source)</span><br><span class="line">    at service<span class="selector-class">.impl</span><span class="selector-class">.UsersDAOImpl</span>.usersLogin(UsersDAOImpl<span class="selector-class">.java</span>:<span class="number">25</span>)</span><br><span class="line">    at action<span class="selector-class">.UsersAction</span>.login(UsersAction<span class="selector-class">.java</span>:<span class="number">26</span>)</span><br><span class="line">    at sun<span class="selector-class">.reflect</span><span class="selector-class">.NativeMethodAccessorImpl</span>.invoke0(Native Method)</span><br><span class="line">    at sun<span class="selector-class">.reflect</span><span class="selector-class">.NativeMethodAccessorImpl</span>.invoke(NativeMethodAccessorImpl<span class="selector-class">.java</span>:<span class="number">57</span>)</span><br><span class="line">    at sun<span class="selector-class">.reflect</span><span class="selector-class">.DelegatingMethodAccessorImpl</span>.invoke(DelegatingMethodAccessorImpl<span class="selector-class">.java</span>:<span class="number">43</span>)</span><br><span class="line">    at java<span class="selector-class">.lang</span><span class="selector-class">.reflect</span><span class="selector-class">.Method</span>.invoke(Method<span class="selector-class">.java</span>:<span class="number">606</span>)</span><br><span class="line">    at com<span class="selector-class">.opensymphony</span><span class="selector-class">.xwork2</span><span class="selector-class">.DefaultActionInvocation</span>.invokeAction(DefaultActionInvocation<span class="selector-class">.java</span>:<span class="number">452</span>)</span><br><span class="line">    at com<span class="selector-class">.opensymphony</span><span class="selector-class">.xwork2</span><span class="selector-class">.DefaultActionInvocation</span>.invokeActionOnly(DefaultActionInvocation<span class="selector-class">.java</span>:<span class="number">291</span>)</span><br><span class="line">    at com<span class="selector-class">.opensymphony</span><span class="selector-class">.xwork2</span><span class="selector-class">.DefaultActionInvocation</span>.invoke(DefaultActionInvocation<span class="selector-class">.java</span>:<span class="number">254</span>)</span><br><span class="line">    at com<span class="selector-class">.opensymphony</span><span class="selector-class">.xwork2</span><span class="selector-class">.interceptor</span><span class="selector-class">.DefaultWorkflowInterceptor</span>.doIntercept(DefaultWorkflowInterceptor<span class="selector-class">.java</span>:<span class="number">176</span>)</span><br><span class="line">    at com<span class="selector-class">.opensymphony</span><span class="selector-class">.xwork2</span><span class="selector-class">.interceptor</span><span class="selector-class">.MethodFilterInterceptor</span>.intercept(MethodFilterInterceptor<span class="selector-class">.java</span>:<span class="number">98</span>)</span><br><span class="line">    at com<span class="selector-class">.opensymphony</span><span class="selector-class">.xwork2</span><span class="selector-class">.DefaultActionInvocation</span>.invoke(DefaultActionInvocation<span class="selector-class">.java</span>:<span class="number">248</span>)</span><br><span class="line">    at com<span class="selector-class">.opensymphony</span><span class="selector-class">.xwork2</span><span class="selector-class">.validator</span><span class="selector-class">.ValidationInterceptor</span>.doIntercept(ValidationInterceptor<span class="selector-class">.java</span>:<span class="number">263</span>)</span><br><span class="line">    at org<span class="selector-class">.apache</span><span class="selector-class">.struts2</span><span class="selector-class">.interceptor</span><span class="selector-class">.validation</span><span class="selector-class">.AnnotationValidationInterceptor</span>.doIntercept(AnnotationValidationInterceptor<span class="selector-class">.java</span>:<span class="number">68</span>)</span><br><span class="line">    at com<span class="selector-class">.opensymphony</span><span class="selector-class">.xwork2</span><span class="selector-class">.interceptor</span><span class="selector-class">.MethodFilterInterceptor</span>.intercept(MethodFilterInterceptor<span class="selector-class">.java</span>:<span class="number">98</span>)</span><br><span class="line">    at com<span class="selector-class">.opensymphony</span><span class="selector-class">.xwork2</span><span class="selector-class">.DefaultActionInvocation</span>.invoke(DefaultActionInvocation<span class="selector-class">.java</span>:<span class="number">248</span>)</span><br><span class="line">    at com<span class="selector-class">.opensymphony</span><span class="selector-class">.xwork2</span><span class="selector-class">.interceptor</span><span class="selector-class">.ConversionErrorInterceptor</span>.intercept(ConversionErrorInterceptor<span class="selector-class">.java</span>:<span class="number">133</span>)</span><br><span class="line">    at com<span class="selector-class">.opensymphony</span><span class="selector-class">.xwork2</span><span class="selector-class">.DefaultActionInvocation</span>.invoke(DefaultActionInvocation<span class="selector-class">.java</span>:<span class="number">248</span>)</span><br><span class="line">    at com<span class="selector-class">.opensymphony</span><span class="selector-class">.xwork2</span><span class="selector-class">.interceptor</span><span class="selector-class">.ParametersInterceptor</span>.doIntercept(ParametersInterceptor<span class="selector-class">.java</span>:<span class="number">207</span>)</span><br><span class="line">    at com<span class="selector-class">.opensymphony</span><span class="selector-class">.xwork2</span><span class="selector-class">.interceptor</span><span class="selector-class">.MethodFilterInterceptor</span>.intercept(MethodFilterInterceptor<span class="selector-class">.java</span>:<span class="number">98</span>)</span><br><span class="line">    at com<span class="selector-class">.opensymphony</span><span class="selector-class">.xwork2</span><span class="selector-class">.DefaultActionInvocation</span>.invoke(DefaultActionInvocation<span class="selector-class">.java</span>:<span class="number">248</span>)</span><br><span class="line">    at com<span class="selector-class">.opensymphony</span><span class="selector-class">.xwork2</span><span class="selector-class">.interceptor</span><span class="selector-class">.ParametersInterceptor</span>.doIntercept(ParametersInterceptor<span class="selector-class">.java</span>:<span class="number">207</span>)</span><br><span class="line">...</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>查了半天，各种原因排除后，发现最终问题是tomcat里面的 antlr-2.7.2.jar包冲突，有两个，还有一个antlr-2.7.7.jar，想了一下可能是导入struts2和hibernate都同时往tomcat里添加了一个antlr包，网上还有人说可能是struts2里面的antlr和hibernate里antlr冲突，<strong>总之就是antlr包冲突</strong>！尽量翻一下各个框架下有没有antlr冲突。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/10/Hibernate%E6%9F%A5%E8%AF%A2%E6%8A%A5%E9%94%99/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-整数分割" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/10/%E6%95%B4%E6%95%B0%E5%88%86%E5%89%B2/">SDUT 3769-分割(BigInteger)</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/10/%E6%95%B4%E6%95%B0%E5%88%86%E5%89%B2/" class="archive-article-date">
-  	<time datetime="2017-03-10T10:52:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>题目传送门：<a target="_blank" rel="noopener" href="http://acm.sdut.edu.cn/onlinejudge2/index.php/Home/Index/problemdetail/pid/3769.html">SDUT 3769-分割</a></p>
-<p>题意:给出一个正整数n(<strong>10 &lt;= n &lt;= 10^1000</strong>)，将这个正整数分割成2个数，怎样分割才能使分成的两个数的和最大呢？请你求出最大的和。</p>
-<p>思路：由于n很大，两种解决方式，串输入然后手写模拟加法。。或者java提供的BigInteger类(本质上依旧是串处理,速度慢的一匹)。<br>然后考虑怎么相加最大，三种情况，比较最高位和次高位的大小：</p>
-<ul>
-<li>前者大：分割个位加上前面的</li>
-<li>后者大：分割最高位加上后面的</li>
-<li>相等:也可以判断，有点麻烦，直接将上面两种情况的和比较大小即可</li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/03/10/%E6%95%B4%E6%95%B0%E5%88%86%E5%89%B2/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/10/%E6%95%B4%E6%95%B0%E5%88%86%E5%89%B2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-字符匹配问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -767,6 +608,158 @@
 
 
   
+    <article id="post-JDBC" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/04/JDBC/">Mysql + JDBC搭建个人通讯录</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/04/JDBC/" class="archive-article-date">
+  	<time datetime="2017-03-04T10:53:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近学习框架，感觉进度一般，每天虽然很多时间都在电脑前，但总感觉学习效率有点低，周末想着学一下Hiberbater然后和struts2整合一下，看了一下突然想起来JDBC还不会呢（_=_）。。虽然Hibernate是对JDBC的轻量级封装，但总感觉直接看跳跃度都点大。然后滚去看了JDBC，然后发现Mysql没装，附带着发现mysql语句都忘的差不多了。。然后巴巴拉拉装上Mysql，Navicate(一个可视化的数据库管理工具)，然后写了个Demo就快到晚上了~</p>
+        
+          <a class="article-more-a" href="/2017/03/04/JDBC/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/04/JDBC/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Hexo+Github Page搭建个人博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/03/Hexo+Github%20Page%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">Hexo + Github Page搭建个人博客</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/03/Hexo+Github%20Page%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
+  	<time datetime="2017-03-03T03:31:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>前几天折腾了一阵子搭了个博客，昨天有老哥问我要教程，想来只用不写确实不厚道，本着分享和回报的精神，趁着上课写一发吧(老师正在讲继承。。)本文介绍使用Hexo + Github Page 搭建个人博客，其他的框架感觉也大同小异，本人参考cyl老哥的教程搭建的：<a target="_blank" rel="noopener" href="http://www.cylong.com/blog/2016/04/19/hexo-git/">教程地址</a><br>在此致谢：<br><a target="_blank" rel="noopener" href="http://www.cylong.com/">cyl同学</a><br><a target="_blank" rel="noopener" href="http://twitter.com/tommy351">tommy351(hexo作者)</a></p>
+        
+          <a class="article-more-a" href="/2017/03/03/Hexo+Github%20Page%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/03/Hexo+Github%20Page%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/10/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/12/">Next &amp;raquo;</a>
@@ -864,11 +857,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -912,11 +905,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
