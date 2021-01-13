@@ -143,6 +143,84 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-leetcode448" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/22/leetcode448/">leetcode-448.Find All Numbers Disappeared</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/22/leetcode448/" class="archive-article-date">
+  	<time datetime="2017-05-22T05:06:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>题目传送门:<a target="_blank" rel="noopener" href="https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/#/description">Find All Numbers Disappeared in an Array</a></p>
+<p>题意：一个序列nums = [1-N],现在有一些数字出现了两次，即意味着有一些没出现，找出没出现的数字。比如,[1,1,2,2,4]  1和2出现了两次，3,5没出现，所以答案是3,5</p>
+<p>思路：哈希即可，遍历原序列,标记出现过数字，然后遍历哈希表即可得到没出现过的数字列表.</p>
+        
+          <a class="article-more-a" href="/2017/05/22/leetcode448/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/22/leetcode448/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-leetcode520" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -664,83 +742,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/05/09/leetcode566/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-leetcode182" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/09/leetcode182/">leetcode-182.Duplicate Emails</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/09/leetcode182/" class="archive-article-date">
-  	<time datetime="2017-05-09T03:29:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>题目传送门：<a target="_blank" rel="noopener" href="https://leetcode.com/problems/duplicate-emails/#/description">Duplicate Emails</a></p>
-<p>题意：给一张表，有两个字段：id和email，要查出重复的邮箱。<br>比如下面这张表：<br>+—-+———+<br>| Id | Email   |<br>+—-+———+<br>| 1  | <a href="mailto:&#x61;&#x40;&#98;&#46;&#99;&#x6f;&#109;">&#x61;&#x40;&#98;&#46;&#99;&#x6f;&#109;</a> |<br>| 2  | <a href="mailto:&#x63;&#x40;&#x64;&#x2e;&#x63;&#x6f;&#109;">&#x63;&#x40;&#x64;&#x2e;&#x63;&#x6f;&#109;</a> |<br>| 3  | <a href="mailto:&#97;&#x40;&#98;&#46;&#99;&#111;&#x6d;">&#97;&#x40;&#98;&#46;&#99;&#111;&#x6d;</a> |<br>+—-+———+<br>查询结果应该为:<br>+———+<br>| Email   |<br>+———+<br>| <a href="mailto:&#x61;&#64;&#x62;&#x2e;&#99;&#x6f;&#109;">&#x61;&#64;&#x62;&#x2e;&#99;&#x6f;&#109;</a> |<br>+———+<br>思路：子查询 + count()函数应用。</p>
-        
-          <a class="article-more-a" href="/2017/05/09/leetcode182/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/09/leetcode182/">展开全文 >></a>
         </p>
       
 
