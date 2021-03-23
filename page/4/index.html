@@ -143,6 +143,82 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ROR" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/24/ROR/">Ruby-On-Rails</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/24/ROR/" class="archive-article-date">
+  	<time datetime="2017-05-24T10:27:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Ruby on Rails 是一个可以使你开发、部署、维护 web 应用程序变得简单的框架。(净瞎扯，web框架我也接触不少了，稳重点的java中的ssh,ssm，奔放的像python的django,flask==以及钟爱的nodejs，正如我以前在v2ex上看到牛人的一句话，这世界上从来没有什么变简单的，<strong>困难从来不会凭空消失</strong>，它只会从一方面转移到另一方面，比如，你说Rails开发Web简单，然而掌握Rails本身却不是一件容易的事，so~)</p>
+        
+          <a class="article-more-a" href="/2017/05/24/ROR/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Ruby</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/24/ROR/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Ruby入门" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -667,83 +743,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/05/15/Python%E7%88%AC%E8%99%AB%E5%85%A5%E9%97%A8%E4%B9%8B%E7%B3%97%E4%BA%8B%E7%99%BE%E7%A7%91/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-leetcode136" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/15/leetcode136/">leetcode-136.Single Number</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/15/leetcode136/" class="archive-article-date">
-  	<time datetime="2017-05-15T08:58:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>题目传送门：<a target="_blank" rel="noopener" href="https://leetcode.com/problems/single-number/#/description">Single Number</a></p>
-<p>题意:给一个序列，里面的数字都是成双出现，只有一个不是，find it，尽量不要用额外的内存</p>
-<p>思路：首先，0异或任何数都等于那个数，即<br><code>x == x ^ 0</code><br>然后一个数异或自己等于0，即<br><code>0 == x ^ x</code><br>所以，让0去异或所给序列，最终结果就是单个的那个数，成双的异或两次不变，即<br><code>0 == 0 ^ x ^ x</code></p>
-<p>python代码：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">singleNumber</span>(<span class="params">self, nums</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type nums: List[int]</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> self <span class="keyword">in</span> nums:</span><br><span class="line">            ans ^= self</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/15/leetcode136/">展开全文 >></a>
         </p>
       
 
