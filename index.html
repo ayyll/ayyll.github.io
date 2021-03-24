@@ -150,7 +150,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/23/Linux%E6%8C%82%E8%BD%BD%E7%89%B9%E6%AE%8Aimg%E9%95%9C%E5%83%8F%E9%97%AE%E9%A2%98/">Linux挂载特殊img镜像问题</a>
+      <a class="article-title" href="/2021/03/23/Linux%E6%8C%82%E8%BD%BD%E7%89%B9%E6%AE%8Aimg%E9%95%9C%E5%83%8F%E9%97%AE%E9%A2%98/">Linux挂载ubi镜像事件始末</a>
     </h1>
   
 
@@ -163,7 +163,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>背景是这样的，公司做嵌入式Linux，其中kernel，uboot已经移植完毕，文件系统也已经做好，且使用的是ubifs，<a target="_blank" rel="noopener" href="https://blog.csdn.net/shichaog/article/details/45932339" title="ubifs">ubifs相关介绍这里</a> 应用程序也已经开发完毕，并且放到文件系统中已经做成了镜像(ubi.img),我接手该项目的时候，手里只有应用程序的源码，没有文件系统的源码，目前的需求是修改应用程序的部分代码，然后要烧录到arm中。</p>
+        <p>背景是这样的，公司做嵌入式Linux，其中kernel，uboot已经移植完毕，文件系统也已经做好，且使用的是ubifs，<a target="_blank" rel="noopener" href="https://blog.csdn.net/shichaog/article/details/45932339" title="ubifs">ubifs相关介绍这里</a> 应用程序也已经开发完毕，并且放到文件系统中已经做成了镜像(ubi.img),我接手该项目的时候，手里只有应用程序的源码，没有文件系统的源码，<strong>目前的需求是修改应用程序的部分代码，然后要烧录到arm中</strong>。</p>
         
           <a class="article-more-a" href="/2021/03/23/Linux%E6%8C%82%E8%BD%BD%E7%89%B9%E6%AE%8Aimg%E9%95%9C%E5%83%8F%E9%97%AE%E9%A2%98/#more">more >></a>
         
