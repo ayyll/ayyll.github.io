@@ -143,6 +143,89 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-git-reset-回溯版本" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/30/git-reset-%E5%9B%9E%E6%BA%AF%E7%89%88%E6%9C%AC/">git reset回溯版本</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/30/git-reset-%E5%9B%9E%E6%BA%AF%E7%89%88%E6%9C%AC/" class="archive-article-date">
+  	<time datetime="2018-01-30T07:59:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在git的使用过程中,通常有以下几种需求需要退回到以前的版本:</p>
+<ol>
+<li>提交了太多的commit,想将某几个commit整合成一个.</li>
+<li>确实要退到某个版本</li>
+</ol>
+<p>关于git reset指令,有3种模式:soft,mixed,hard</p>
+<h2 id="soft"><a href="#soft" class="headerlink" title="soft"></a>soft</h2><p><code>git reset --soft HEAD~n</code><br>soft复位通常会把上一次的commit操作撤销.假如要合并前3次的commit,那么执行<code>git reset --soft HEAD~3</code>就可以撤销前3次的commit,然后重新commit一次就好.</p>
+<h2 id="mixed"><a href="#mixed" class="headerlink" title="mixed"></a>mixed</h2><p><code>git reset --mixed HEAD~n</code><br>mixed复位程度比soft重一些,它会把之前add的操作也撤销,这时候可以重新选择要add的文件.</p>
+<h2 id="hard"><a href="#hard" class="headerlink" title="hard"></a>hard</h2><p><code>git reset --hard HEAD~n</code><br>前面两种复位,都不会改变工作区的内容,就是你所看到的内容.但是如果使用硬复位,会把工作区的内容也撤销,就是真正的回到之前的某个节点(版本).你所改动的内容也会随之改变.</p>
+<p><del><strong>最后,硬复位之后不容易恢复,慎用.</strong></del><br>硬复位之后也可以再回退过去，首先要用<code>git reflog</code> 指令查看一下操作记录（包括commit和reset的操作），找到之前的commit-id，然后通过<code>git reset --hard commit-id</code>指令回到任意节点的版本。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/30/git-reset-%E5%9B%9E%E6%BA%AF%E7%89%88%E6%9C%AC/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-那些年让你魂牵梦绕的峡谷" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -702,91 +785,6 @@
 
 
   
-    <article id="post-pip的一些问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/07/pip%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/">pip的一些问题</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/07/pip%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2017-11-07T14:17:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>众所周知pip是管理(安装)python包的一款神器,但是用的时候确实有很多问题，特此记录一下。</p>
-<p>最简单的使用方法是：</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="keyword">install</span> 包名</span><br></pre></td></tr></table></figure>
-<p>大部分情况下这样是可以成功安装的，but，有时候会出一些问题。</p>
-<h1 id="问题一-Fatal-error-in-launcher"><a href="#问题一-Fatal-error-in-launcher" class="headerlink" title="问题一:Fatal error in launcher"></a>问题一:Fatal error in launcher</h1><p>当你的电脑上装了多个版本的python之后，比如博主装了python2.7和python3.6，这时候对应pip也会有多个版本，这时候需要通过改名字之类的(pip2/pip3)解决冲突的问题，但是某一天问题实在太多，索性把python3卸载了，但是这时候pip不能用了，用的时候报错：<br><code>ERROR：Fatal error in launcher: Unable to create process using</code> </p>
-<p>解决方法是升级一下pip：</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install <span class="comment">--upgrade pip</span></span><br></pre></td></tr></table></figure>
-<h1 id="问题二-下载超时-SSL连接失败"><a href="#问题二-下载超时-SSL连接失败" class="headerlink" title="问题二:下载超时/SSL连接失败"></a>问题二:下载超时/SSL连接失败</h1><p>经常会出现timeout之类的错误，主要是包源的问题，如果遇到这种情况可以使用指定国内的镜像下载，推荐豆瓣的镜像源：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -i https:<span class="regexp">//</span>pypi.doubanio.com<span class="regexp">/simple/</span> 包名</span><br></pre></td></tr></table></figure>
-<p>但是linux下面可能会会报SSL连接的错误，错误信息大概是如下这种：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Could not fetch URL https:<span class="regexp">//</span>pypi.doubanio.com<span class="regexp">/simple/</span>: There was a problem confirming the ssl certificate......</span><br></pre></td></tr></table></figure>
-<p>解决办法是将该镜像源添加信任：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --trusted-host pypi.doubanio.com -i https:<span class="regexp">//</span>pypi.doubanio.com<span class="regexp">/simple/</span> 包名</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/07/pip%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
@@ -957,6 +955,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">网络</a>
               </li>
             
             <div class="clearfix"></div>

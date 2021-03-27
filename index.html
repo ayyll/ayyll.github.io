@@ -143,6 +143,86 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Github访问及加载图片问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/27/Github%E8%AE%BF%E9%97%AE%E5%8F%8A%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87%E9%97%AE%E9%A2%98/">Github访问及加载图片问题</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/27/Github%E8%AE%BF%E9%97%AE%E5%8F%8A%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87%E9%97%AE%E9%A2%98/" class="archive-article-date">
+  	<time datetime="2021-03-27T02:58:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>近日发现公司的网上不去github，ping了一下能ping通，感觉是DNS的问题，查了一下，具体解决方案如下：<br>先通过站长工具找出DNS地址（<a target="_blank" rel="noopener" href="http://tool.chinaz.com/dns/%EF%BC%8C%E5%9C%A8A%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%9F%A5%E8%AF%A2%E4%B8%AD%E8%BE%93%E5%85%A5github.com%EF%BC%8C%E6%89%BE%E5%87%BA%E6%9C%80%E5%BF%AB%EF%BC%88TTL%E5%80%BC%E6%9C%80%E5%B0%8F%E7%9A%84%EF%BC%89%E7%9A%84IP%E5%9C%B0%E5%9D%80,%E7%84%B6%E5%90%8E%E7%BC%96%E8%BE%91hosts%E6%96%87%E4%BB%B6%EF%BC%8C%E6%B7%BB%E5%8A%A0%E5%AF%B9%E5%BA%94%E7%9A%84IP%E5%88%B0%E9%87%8C%E9%9D%A2%EF%BC%8C%E6%AF%94%E5%A6%82%E6%88%91%E7%9A%84%E6%98%AF(%E5%8F%AF%E4%BB%A5%E5%A4%9A%E5%86%99%E5%87%A0%E4%B8%AA)%EF%BC%9A">http://tool.chinaz.com/dns/，在A类型的查询中输入github.com，找出最快（TTL值最小的）的IP地址,然后编辑hosts文件，添加对应的IP到里面，比如我的是(可以多写几个)：</a> </p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">13.250.177.223</span> github.com</span><br></pre></td></tr></table></figure>
+<p>对于hosts文件的位置：<br>Windows是在 C:\Windows\System32\drivers\etc\hosts<br>Linux是在 /etc/hosts</p>
+<p>添加ip后即可访问了。</p>
+<p>关于图片加载不出来的问题，解决思路同上，先把DNS地址解析出来，在A类型的查询中输入raw.githubusercontent.com，这个可能会有点慢，我这边大都是1000+的延迟，多写几个放到hosts里去，如下，继续在hosts添加：</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">185.199.108.133</span> raw.githubusercontent.com</span><br><span class="line"><span class="number">185.199.109.133</span> raw.githubusercontent.com</span><br><span class="line"><span class="number">185.199.110.133</span> raw.githubusercontent.com</span><br><span class="line"><span class="number">185.199.111.133</span> raw.githubusercontent.com</span><br></pre></td></tr></table></figure>
+<p>最后刷新DNS解析缓存即可(在终端输入)：</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ipconfig</span> /flushdns</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">网络</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/27/Github%E8%AE%BF%E9%97%AE%E5%8F%8A%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87%E9%97%AE%E9%A2%98/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Linux挂载特殊img镜像问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -678,89 +758,6 @@
 
 
   
-    <article id="post-git-reset-回溯版本" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/30/git-reset-%E5%9B%9E%E6%BA%AF%E7%89%88%E6%9C%AC/">git reset回溯版本</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/30/git-reset-%E5%9B%9E%E6%BA%AF%E7%89%88%E6%9C%AC/" class="archive-article-date">
-  	<time datetime="2018-01-30T07:59:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在git的使用过程中,通常有以下几种需求需要退回到以前的版本:</p>
-<ol>
-<li>提交了太多的commit,想将某几个commit整合成一个.</li>
-<li>确实要退到某个版本</li>
-</ol>
-<p>关于git reset指令,有3种模式:soft,mixed,hard</p>
-<h2 id="soft"><a href="#soft" class="headerlink" title="soft"></a>soft</h2><p><code>git reset --soft HEAD~n</code><br>soft复位通常会把上一次的commit操作撤销.假如要合并前3次的commit,那么执行<code>git reset --soft HEAD~3</code>就可以撤销前3次的commit,然后重新commit一次就好.</p>
-<h2 id="mixed"><a href="#mixed" class="headerlink" title="mixed"></a>mixed</h2><p><code>git reset --mixed HEAD~n</code><br>mixed复位程度比soft重一些,它会把之前add的操作也撤销,这时候可以重新选择要add的文件.</p>
-<h2 id="hard"><a href="#hard" class="headerlink" title="hard"></a>hard</h2><p><code>git reset --hard HEAD~n</code><br>前面两种复位,都不会改变工作区的内容,就是你所看到的内容.但是如果使用硬复位,会把工作区的内容也撤销,就是真正的回到之前的某个节点(版本).你所改动的内容也会随之改变.</p>
-<p><del><strong>最后,硬复位之后不容易恢复,慎用.</strong></del><br>硬复位之后也可以再回退过去，首先要用<code>git reflog</code> 指令查看一下操作记录（包括commit和reset的操作），找到之前的commit-id，然后通过<code>git reset --hard commit-id</code>指令回到任意节点的版本。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/30/git-reset-%E5%9B%9E%E6%BA%AF%E7%89%88%E6%9C%AC/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -931,6 +928,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">网络</a>
               </li>
             
             <div class="clearfix"></div>

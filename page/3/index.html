@@ -143,6 +143,91 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-pip的一些问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/07/pip%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/">pip的一些问题</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/07/pip%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/" class="archive-article-date">
+  	<time datetime="2017-11-07T14:17:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>众所周知pip是管理(安装)python包的一款神器,但是用的时候确实有很多问题，特此记录一下。</p>
+<p>最简单的使用方法是：</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="keyword">install</span> 包名</span><br></pre></td></tr></table></figure>
+<p>大部分情况下这样是可以成功安装的，but，有时候会出一些问题。</p>
+<h1 id="问题一-Fatal-error-in-launcher"><a href="#问题一-Fatal-error-in-launcher" class="headerlink" title="问题一:Fatal error in launcher"></a>问题一:Fatal error in launcher</h1><p>当你的电脑上装了多个版本的python之后，比如博主装了python2.7和python3.6，这时候对应pip也会有多个版本，这时候需要通过改名字之类的(pip2/pip3)解决冲突的问题，但是某一天问题实在太多，索性把python3卸载了，但是这时候pip不能用了，用的时候报错：<br><code>ERROR：Fatal error in launcher: Unable to create process using</code> </p>
+<p>解决方法是升级一下pip：</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install <span class="comment">--upgrade pip</span></span><br></pre></td></tr></table></figure>
+<h1 id="问题二-下载超时-SSL连接失败"><a href="#问题二-下载超时-SSL连接失败" class="headerlink" title="问题二:下载超时/SSL连接失败"></a>问题二:下载超时/SSL连接失败</h1><p>经常会出现timeout之类的错误，主要是包源的问题，如果遇到这种情况可以使用指定国内的镜像下载，推荐豆瓣的镜像源：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -i https:<span class="regexp">//</span>pypi.doubanio.com<span class="regexp">/simple/</span> 包名</span><br></pre></td></tr></table></figure>
+<p>但是linux下面可能会会报SSL连接的错误，错误信息大概是如下这种：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Could not fetch URL https:<span class="regexp">//</span>pypi.doubanio.com<span class="regexp">/simple/</span>: There was a problem confirming the ssl certificate......</span><br></pre></td></tr></table></figure>
+<p>解决办法是将该镜像源添加信任：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --trusted-host pypi.doubanio.com -i https:<span class="regexp">//</span>pypi.doubanio.com<span class="regexp">/simple/</span> 包名</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/07/pip%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-爬取可用的代理ip" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -684,82 +769,6 @@
 
 
   
-    <article id="post-快速排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/26/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">快速排序</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/26/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" class="archive-article-date">
-  	<time datetime="2017-05-26T10:13:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>快速排序由于排序效率在同为O(N·logN)的几种排序方法中效率较高，因此经常被采用.想必大家都对此不陌生了。快速排序的主要用到的思想是<strong>分治</strong>,先从序列中选一个数做为<strong>基准数</strong>(一般选第一个数),然后把比基准数大的全放到它的<strong>右边</strong>，比基准数小的全放到它的左边，然后以这个基准数为中心，这样就有了两个区间，左区间和右区间，<strong>然后递归对这两个区间再次进行一开始的操作</strong>，直到每个区间只有一个数。</p>
-        
-          <a class="article-more-a" href="/2017/05/26/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/26/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/4/">Next &amp;raquo;</a>
@@ -930,6 +939,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">网络</a>
               </li>
             
             <div class="clearfix"></div>
