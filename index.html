@@ -163,7 +163,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>近日发现公司的网上不去github，ping了一下能ping通，感觉是DNS的问题，查了一下，具体解决方案如下：<br>先通过站长工具找出DNS地址（<a target="_blank" rel="noopener" href="http://tool.chinaz.com/dns/%EF%BC%8C%E5%9C%A8A%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%9F%A5%E8%AF%A2%E4%B8%AD%E8%BE%93%E5%85%A5github.com%EF%BC%8C%E6%89%BE%E5%87%BA%E6%9C%80%E5%BF%AB%EF%BC%88TTL%E5%80%BC%E6%9C%80%E5%B0%8F%E7%9A%84%EF%BC%89%E7%9A%84IP%E5%9C%B0%E5%9D%80,%E7%84%B6%E5%90%8E%E7%BC%96%E8%BE%91hosts%E6%96%87%E4%BB%B6%EF%BC%8C%E6%B7%BB%E5%8A%A0%E5%AF%B9%E5%BA%94%E7%9A%84IP%E5%88%B0%E9%87%8C%E9%9D%A2%EF%BC%8C%E6%AF%94%E5%A6%82%E6%88%91%E7%9A%84%E6%98%AF(%E5%8F%AF%E4%BB%A5%E5%A4%9A%E5%86%99%E5%87%A0%E4%B8%AA)%EF%BC%9A">http://tool.chinaz.com/dns/，在A类型的查询中输入github.com，找出最快（TTL值最小的）的IP地址,然后编辑hosts文件，添加对应的IP到里面，比如我的是(可以多写几个)：</a> </p>
+        <p>近日发现公司的网上不去github，ping了一下能ping通，感觉是DNS的问题，查了一下，具体解决方案如下：<br>先通过<a target="_blank" rel="noopener" href="http://tool.chinaz.com/dns/" title="站长工具">站长工具</a>找出DNS地址，在A类型的查询中输入github.com，找出最快（TTL值最小的）的IP地址,然后编辑hosts文件，添加对应的IP到里面，比如我的是(可以多写几个)： </p>
 <figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">13.250.177.223</span> github.com</span><br></pre></td></tr></table></figure>
 <p>对于hosts文件的位置：<br>Windows是在 C:\Windows\System32\drivers\etc\hosts<br>Linux是在 /etc/hosts</p>
 <p>添加ip后即可访问了。</p>
