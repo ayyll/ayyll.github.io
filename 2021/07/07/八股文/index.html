@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.ayyll.com">
-  <title>Mr.yang</title>
+  <title>八股文 | Mr.yang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="山东理工大学13级。擅长各项后端技能，嵌入式开发。此为博客一枚。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Mr.yang">
-<meta property="og:url" content="http://www.ayyll.com/page/7/index.html">
+  <meta name="description" content="面试八股文。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="八股文">
+<meta property="og:url" content="http://www.ayyll.com/2021/07/07/%E5%85%AB%E8%82%A1%E6%96%87/index.html">
 <meta property="og:site_name" content="Mr.yang">
-<meta property="og:description" content="山东理工大学13级。擅长各项后端技能，嵌入式开发。此为博客一枚。">
+<meta property="og:description" content="面试八股文。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-07-07T03:00:41.000Z">
+<meta property="article:modified_time" content="2021-07-07T09:47:06.236Z">
 <meta property="article:author" content="yh">
-<meta property="article:tag" content="后端,java,php,golang,python,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek">
+<meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Mr.yang" type="application/atom+xml">
@@ -141,32 +143,100 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-springmvc拦截器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-八股文" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/30/springmvc%E6%8B%A6%E6%88%AA%E5%99%A8/">springmvc拦截器</a>
+    <h1 class="article-title" itemprop="name">
+      八股文
     </h1>
   
 
         
-        <a href="/2017/04/30/springmvc%E6%8B%A6%E6%88%AA%E5%99%A8/" class="archive-article-date">
-  	<time datetime="2017-04-30T11:54:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-30</time>
+        <a href="/2021/07/07/%E5%85%AB%E8%82%A1%E6%96%87/" class="archive-article-date">
+  	<time datetime="2021-07-07T03:00:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在实际开发中，我们经常需要对请求进行拦截，以判断该请求是否是一个合法的请求，对于jsp，可以采用过滤器进行拦截，而对于普通的请求或者是do请求还是action请求什么乱七八糟的，可以使用SpringMVC提供的拦截器,SpringMVC中的Interceptor 拦截请求是通过HandlerInterceptor来实现的。在SpringMVC 中定义一个Interceptor非常简单，主要有两种方式，第一种方式是要定义的Interceptor类要实现了Spring的HandlerInterceptor接口,或者是这个类继承实现了HandlerInterceptor接口的类，<strong>比如Spring已经提供的实现了HandlerInterceptor接口的抽象类HandlerInterceptorAdapter</strong>；第二种方式是实现Spring的WebRequestInterceptor接口，或者是继承实现了WebRequestInterceptor的类。</p>
-        
-          <a class="article-more-a" href="/2017/04/30/springmvc%E6%8B%A6%E6%88%AA%E5%99%A8/#more">more >></a>
-        
+        <p>面试八股文。</p>
+<a id="more"></a>
+
+<h1 id="c-c-基础"><a href="#c-c-基础" class="headerlink" title="c/c++基础"></a>c/c++基础</h1><h2 id="static关键字"><a href="#static关键字" class="headerlink" title="static关键字"></a>static关键字</h2><h3 id="局部静态变量"><a href="#局部静态变量" class="headerlink" title="局部静态变量"></a>局部静态变量</h3><p>局部静态变量存储在<strong>静态存储区</strong>，局部静态变量离开作用域之后并没有被销毁，而是仍驻留在内存中，但是后续不能在对它的值进行修改。</p>
+<h3 id="全局静态变量"><a href="#全局静态变量" class="headerlink" title="全局静态变量"></a>全局静态变量</h3><p>全局静态变量存储在<strong>静态存储区</strong>,在声明它的文件之外是不可见的。</p>
+<h3 id="静态函数"><a href="#静态函数" class="headerlink" title="静态函数"></a>静态函数</h3><p>静态函数在声明它的文件之外是不可见的。</p>
+<h3 id="类的静态成员-成员函数"><a href="#类的静态成员-成员函数" class="headerlink" title="类的静态成员/成员函数"></a>类的静态成员/成员函数</h3><p>在类中，它们是<strong>属于类的</strong>，而不是某个对象，所有对象共享一个静态成员。可以通过类名的方式调用，<strong>不需要实例化也可以调用</strong>。</p>
+<h2 id="指针和引用的区别"><a href="#指针和引用的区别" class="headerlink" title="指针和引用的区别"></a>指针和引用的区别</h2><p>引用：引用就是某一变量的一个别名，对引用的操作与对变量直接操作完全一样。引用的声明方法：<strong>类型标识符 &amp;引用名=目标变量名</strong></p>
+<p>指针：本质上是一个变量，存放的是它所指向变量的地址。指针的声明方法：类型标识符 *指针变量名=&amp;目标变量名</p>
+<ul>
+<li>指针有自己的一块空间，而引用只是一个别名</li>
+<li>指针可以被初始化为NULL，而引用必须<strong>被初始化</strong>且必须是一个<strong>已有对象的引用</strong></li>
+<li>指针在使用中<strong>可以指向其它对象</strong>，但是<strong>引用只能是一个对象的引用</strong>，不能被改变</li>
+<li>指针可以有多级指针，而引用至多一级</li>
+</ul>
+<h2 id="虚函数"><a href="#虚函数" class="headerlink" title="虚函数"></a>虚函数</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>C++虚函数是定义在<strong>基类</strong>中的函数，子类可以对其进行覆盖。如果基类中的虚函数没有函数体，则称之为<strong>纯虚函数.</strong>(子类必须覆盖纯虚函数)</p>
+<p>虚函数定义方式如下：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">virtual void <span class="function"><span class="title">fun</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>在使用<strong>指向子类对象</strong>的父类指针，并调用子类中的覆盖函数时，如果该函数不是虚函数，那么将调用父类中的该函数；如果该函数是虚函数，则会调用子类中的该函数。</p>
+<p>比如 :</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Father</span> &#123;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="keyword">virtual</span> <span class="title">fun</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Father do&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Son</span>:</span><span class="keyword">public</span> Father &#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Son do&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	Father *p;</span><br><span class="line">	Son s;</span><br><span class="line">	p = &amp;s;</span><br><span class="line"></span><br><span class="line">	p-&gt;fun();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>上面这段代码输出的是”Son do”，但是如果父类中的fun()函数不是虚函数，则输出的是”Father do”。</p>
+<h2 id="面向对象-封装、继承、多态"><a href="#面向对象-封装、继承、多态" class="headerlink" title="面向对象(封装、继承、多态)"></a>面向对象(封装、继承、多态)</h2><h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3><p>封装就是将抽象得到的<strong>数据和行为</strong>相结合，形成一个有机的整体，目的在于将对象的使用者和设计者分开，以提高软件的可维护性和可修改性。</p>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>继承就是新类从<strong>已有类</strong>那里(继承)得到已有的特性。</p>
+<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><p>可以简单概括为“<strong>一个接口，多种方法</strong>”，即用的是同一个接口，但是效果各不相同，多态有两种形式的多态，一种是静态多态，一种是动态多态。</p>
+<p>动态多态(运行时多态)是指在程序运行时才能确定函数和实现的链接，此时才能确定调用哪个函数，<strong>运行时多态的实现依赖于虚函数机制。</strong></p>
+<h2 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p>内存泄漏：指因为疏忽或错误造成<strong>程序未能释放已经不再使用的内存</strong>的情况。内存泄漏并不是指内存在物理上的消失，而是应用程序分配某段内存后，因为设计错误，失去了对该段内存的控制，因而造成了内存的浪费。</p>
+<h3 id="检测"><a href="#检测" class="headerlink" title="检测"></a>检测</h3><p>内存泄漏通常是<strong>由于调用了malloc/new等内存申请的操作，但是缺少了对应的free/delete</strong>。为了判断内存是否泄露，我们一方面可以使用linux环境下的<strong>内存泄漏检查工具Valgrind</strong>,另一方面我们在写代码时可以添加内存申请和释放的统计功能，统计当前申请和释放的内存是否一致，以此来判断内存是否泄露。</p>
+<h2 id="野指针"><a href="#野指针" class="headerlink" title="野指针"></a>野指针</h2><p>野指针就是<strong>指向一个已删除的对象</strong>或者<strong>未申请访问受限内存区域</strong>的指针。</p>
+<h2 id="智能指针"><a href="#智能指针" class="headerlink" title="智能指针"></a>智能指针</h2><p>智能指针主要用于<strong>管理在堆上分配的内存</strong>，它将普通的指针封装为一个<strong>栈对象</strong>。当栈对象的生存周期结束后，会在<strong>析构函数中释放掉申请的内存</strong>，从而<strong>防止内存泄漏</strong>。</p>
+<h2 id="new和malloc的区别"><a href="#new和malloc的区别" class="headerlink" title="new和malloc的区别"></a>new和malloc的区别</h2><ol>
+<li>new分配内存按照<strong>数据类型</strong>进行分配，malloc分配内存按照<strong>指定的大小</strong>分配</li>
+<li>new返回的是<strong>指定对象的指针</strong>，而malloc返回的是<strong>void</strong>，因此malloc的返回值一般都需要进行类型转化。</li>
+<li>new不仅分配一段内存，而且会调用<strong>构造函数</strong>，malloc不会。</li>
+<li>new分配的内存要用<strong>delete</strong>销毁，malloc要用<strong>free</strong>来销毁；delete销毁的时候会调用对象的<strong>析构函数</strong>，而free则不会。</li>
+<li>new是一个操作符可以<strong>重载</strong>，malloc是一个<strong>库函数</strong>。</li>
+<li>new如果分配失败了会抛出<strong>bad_malloc的异常</strong>，而malloc失败了会返回<strong>NULL</strong>。</li>
+</ol>
+<h2 id="STL容器"><a href="#STL容器" class="headerlink" title="STL容器"></a>STL容器</h2><h3 id="map和set的区别"><a href="#map和set的区别" class="headerlink" title="map和set的区别"></a>map和set的区别</h3><p>map和set都是C++的<strong>关联容器</strong>，其底层实现都是红黑树(RB-Tree)。</p>
+<p>区别：</p>
+<ul>
+<li>map中的元素是<strong>键值对</strong>存在的，关键字起到索引的作用，值则表示与索引相关联的数据；Set与之相对就是<strong>关键字</strong>的简单集合，set中每个元素只包含一个关键字。</li>
+<li>set的迭代器是const的，<strong>不允许修改元素的值</strong>；map<strong>允许修改value</strong>，但不允许修改key。</li>
+<li>map支持下标操作，set不支持下标操作。</li>
+</ul>
+<h3 id="vector和list的区别"><a href="#vector和list的区别" class="headerlink" title="vector和list的区别"></a>vector和list的区别</h3><h4 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h4><ul>
+<li>连续存储的容器，动态数组，在堆上分配空间,底层实现为数组.</li>
+<li>访问O(1)</li>
+<li>在尾部插入、删除速度快</li>
+</ul>
+<h4 id="list"><a href="#list" class="headerlink" title="list"></a>list</h4><ul>
+<li>动态链表，在堆上分配空间，每插入一个元数都会分配空间，每删除一个元素都会释放空间。底层实现为双向链表。</li>
+<li>随机访问性能很差，只能快速访问头尾节点。</li>
+<li>插入删除很快，一般是常数开销。</li>
+</ul>
+<h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><h2 id="线程与进程"><a href="#线程与进程" class="headerlink" title="线程与进程"></a>线程与进程</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>进程是对运行时程序的封装，是<strong>资源分配</strong>的最小单位，实现了<strong>操作系统的并发</strong>；</p>
+<p>线程是进程的子任务，是<strong>CPU调度</strong>的最小单位，用于保证程序的实时性，实现<strong>进程内部的并发</strong>；</p>
+<h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><ul>
+<li>一个线程只能属于一个进程，而一个进程可以有多个线程，但至少有一个线程。<strong>线程依赖于进程而存在</strong>。</li>
+<li>进程在执行过程中拥有独立的内存单元，而多个线程共享进程的内存。</li>
+<li>进程是<strong>资源分配</strong>的最小单位，线程是<strong>CPU调度</strong>的最小单位；</li>
+</ul>
+<h2 id="进程间的通信方式"><a href="#进程间的通信方式" class="headerlink" title="进程间的通信方式"></a>进程间的通信方式</h2><ul>
+<li>管道</li>
+<li>消息队列</li>
+<li>共享内存</li>
+<li>socket</li>
+</ul>
+<h2 id="线程间的通信方式"><a href="#线程间的通信方式" class="headerlink" title="线程间的通信方式"></a>线程间的通信方式</h2><ul>
+<li>临界区</li>
+<li>信号量</li>
+<li>互斥量</li>
+</ul>
+
       
 
       
@@ -179,7 +249,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C++</a>
         		</li>
       		
 		</ul>
@@ -188,16 +258,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/30/springmvc%E6%8B%A6%E6%88%AA%E5%99%A8/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.ayyll.com/2021/07/07/%E5%85%AB%E8%82%A1%E6%96%87/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2021/03/27/Github%E8%AE%BF%E9%97%AE%E5%8F%8A%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87%E9%97%AE%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Github访问及加载图片问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -217,547 +346,14 @@
 
 
 
-
-  
-    <article id="post-springmvc文件上传" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/30/springmvc%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/">springmvc文件上传</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/30/springmvc%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" class="archive-article-date">
-  	<time datetime="2017-04-30T10:31:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>关于文件上传，如果用servlet的话，需要自己实现文件上传，springmvc提供了MultipartFile类，可以用@RequestParam注解接收文件，transferTo()方法实现文件保存.<br>具体步骤如下.</p>
-        
-          <a class="article-more-a" href="/2017/04/30/springmvc%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/30/springmvc%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ajax提交文件表单" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/26/ajax%E6%8F%90%E4%BA%A4%E6%96%87%E4%BB%B6%E8%A1%A8%E5%8D%95/">ajax提交文件表单</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/26/ajax%E6%8F%90%E4%BA%A4%E6%96%87%E4%BB%B6%E8%A1%A8%E5%8D%95/" class="archive-article-date">
-  	<time datetime="2017-04-26T08:44:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近用servlet做项目。。感觉从春天掉到了冬天。比如很坑的一点是ajax请求servlet的时候响应真的垃圾。。服务器一点问题没有，json数据也返回了，但经常跑到error回调函数里面去，问了下lx他说有可能是请求超时的问题，我觉着可能是servlet返回的效率有点低。。<br>回到正题，ajax提交带文件的表单的时候需要用form控件:<br><a target="_blank" rel="noopener" href="http://pan.baidu.com/s/1pKMoDSn">jquery.form.js</a></p>
-        
-          <a class="article-more-a" href="/2017/04/26/ajax%E6%8F%90%E4%BA%A4%E6%96%87%E4%BB%B6%E8%A1%A8%E5%8D%95/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/26/ajax%E6%8F%90%E4%BA%A4%E6%96%87%E4%BB%B6%E8%A1%A8%E5%8D%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ajax请求Servlet" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/25/ajax%E8%AF%B7%E6%B1%82Servlet/">ajax请求Servlet</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/25/ajax%E8%AF%B7%E6%B1%82Servlet/" class="archive-article-date">
-  	<time datetime="2017-04-25T00:32:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>以前还真没用ajax和servlet交互过~。。然后昨天ltg问我servlet怎么返回给ajaxJson数据，以前一直用springmvc的注解傻瓜式返回。。确实没想过ajax怎么返回的，查了一下原来是流传输，返回的数据是json字符串。</p>
-        
-          <a class="article-more-a" href="/2017/04/25/ajax%E8%AF%B7%E6%B1%82Servlet/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/25/ajax%E8%AF%B7%E6%B1%82Servlet/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-银行管理系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/21/%E9%93%B6%E8%A1%8C%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">基于SSM的银行管理系统</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/21/%E9%93%B6%E8%A1%8C%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/" class="archive-article-date">
-  	<time datetime="2017-04-21T08:14:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近回校答辩(中期答辩),排队进行，等了两个多小时后，上台正准备念”精心”准备的ppt，结果台下老师说，行了，别废话了，直接来重点吧。然后无奈只能翻过去前面扯的一堆大义凛然的话，说这是我做的毕业设计明曰银行管理系统，老师说你这题目有点大了，银行是你想管理就管理的吗？ok，我改好吧。然后说了一下用到的框架，以及界面的截图给他们看了一下，高老师看完之后说你这能和银行的数据连上吗。。(老哥你是在做梦吧) 很无奈的跟他说连不了，这只是个人做着玩的，然后就没有然后了，说下次再来的时候演示一下就行了。<br>  以上题外话。<br>演示地址：<a target="_blank" rel="noopener" href="http://120.25.149.118/BankSystem/">个人银行管理系统</a></p>
-        
-          <a class="article-more-a" href="/2017/04/21/%E9%93%B6%E8%A1%8C%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">项目</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/21/%E9%93%B6%E8%A1%8C%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-过滤器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/19/%E8%BF%87%E6%BB%A4%E5%99%A8/">过滤器</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/19/%E8%BF%87%E6%BB%A4%E5%99%A8/" class="archive-article-date">
-  	<time datetime="2017-04-19T06:20:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>过滤器是Servlet技术中最实用的技术，Web开发人员通过Filter技术，对web服务器管理的所有web资源：例如Jsp, Servlet, 静态图片文件或静态 html 文件等进行拦截，从而实现一些特殊的功能。例如实现URL级别的权限访问控制、过滤敏感词汇、压缩响应信息等一些高级功能。</p>
-<p>它主要用于对用户请求进行预处理，也可以对HttpServletResponse进行后处理。使用Filter的完整流程：<strong>Filter对用户请求进行预处理，接着将请求交给Servlet进行处理并生成响应，最后Filter再对服务器响应进行后处理。</strong></p>
-        
-          <a class="article-more-a" href="/2017/04/19/%E8%BF%87%E6%BB%A4%E5%99%A8/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/19/%E8%BF%87%E6%BB%A4%E5%99%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-maven项目报错总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/18/maven%E9%A1%B9%E7%9B%AE%E6%8A%A5%E9%94%99%E6%80%BB%E7%BB%93/">maven项目报错总结</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/18/maven%E9%A1%B9%E7%9B%AE%E6%8A%A5%E9%94%99%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2017-04-18T11:10:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>昨晚把一个maven项目从一台电脑导入另一台电脑后，本来这种移植的事情就很容易发生意外，但真的是惊人的多，网上的错几乎搜了遍，真奇怪我能把所有的错都犯一遍。。</p>
-        
-          <a class="article-more-a" href="/2017/04/18/maven%E9%A1%B9%E7%9B%AE%E6%8A%A5%E9%94%99%E6%80%BB%E7%BB%93/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/18/maven%E9%A1%B9%E7%9B%AE%E6%8A%A5%E9%94%99%E6%80%BB%E7%BB%93/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-springmvc解决GET请求中文乱码问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/15/springmvc%E8%A7%A3%E5%86%B3GET%E8%AF%B7%E6%B1%82%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/">springmvc解决GET请求中文乱码问题</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/15/springmvc%E8%A7%A3%E5%86%B3GET%E8%AF%B7%E6%B1%82%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2017-04-15T05:40:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>对于ajax通过get方式请求spingmvc中文乱码的问题，有如下解决方式:<br>在tamcat中server.xml文件找到</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Connector <span class="attribute">port</span>=<span class="string">&quot;8080&quot;</span> <span class="attribute">protocol</span>=<span class="string">&quot;HTTP/1.1&quot;</span> <span class="attribute">connectionTimeout</span>=<span class="string">&quot;20000&quot;</span> <span class="attribute">redirectPort</span>=<span class="string">&quot;8443&quot;</span> /&gt;</span><br></pre></td></tr></table></figure>
-<p>添加如下属性：</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">URIEncoding</span>=<span class="string">&quot;UTF-8&quot;</span></span><br></pre></td></tr></table></figure>
-<p>重新部署项目即可.</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/15/springmvc%E8%A7%A3%E5%86%B3GET%E8%AF%B7%E6%B1%82%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/6/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/8/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -780,8 +376,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

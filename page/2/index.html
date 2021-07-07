@@ -143,6 +143,83 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-sublime-text配置g-编译" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/26/sublime-text%E9%85%8D%E7%BD%AEg-%E7%BC%96%E8%AF%91/">sublime text配置g++编译</a>
+    </h1>
+  
+
+        
+        <a href="/2018/02/26/sublime-text%E9%85%8D%E7%BD%AEg-%E7%BC%96%E8%AF%91/" class="archive-article-date">
+  	<time datetime="2018-02-26T03:13:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>sublime text配置g++编译环境很简单,只需要在tools-&gt;Build System-&gt;New Build System,此时会生成一个.sublime-build文件。</p>
+<p>windows下配置文件内容如下：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;encoding&quot;</span>:<span class="string">&quot;utf-8&quot;</span>,</span><br><span class="line">    <span class="string">&quot;working_dir&quot;</span>:<span class="string">&quot;<span class="variable">$file_path</span>&quot;</span>,</span><br><span class="line">    <span class="string">&quot;shell_cmd&quot;</span>:<span class="string">&quot;g++ -Wall -std=c++11 \&quot;</span><span class="variable">$file_name</span>\<span class="string">&quot; -o \&quot;</span><span class="variable">$file_base_name</span>\<span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="string">&quot;file_regex&quot;</span>:<span class="string">&quot;^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)<span class="variable">$</span>&quot;</span>,</span><br><span class="line">    <span class="string">&quot;selector&quot;</span>:<span class="string">&quot;source.c++&quot;</span>,</span><br><span class="line">    </span><br><span class="line">    <span class="string">&quot;variants&quot;</span>:</span><br><span class="line">    [&#123;</span><br><span class="line">        <span class="string">&quot;name&quot;</span>:<span class="string">&quot;Run&quot;</span>,      </span><br><span class="line">        <span class="string">&quot;shell_cmd&quot;</span>:<span class="string">&quot;g++ -Wall -std=c++11 \&quot;</span><span class="variable">$file</span>\<span class="string">&quot; -o \&quot;</span><span class="variable">$file_base_name</span>\<span class="string">&quot; &amp;&amp; start cmd /c \&quot;</span>\<span class="string">&quot;<span class="variable">$</span>&#123;file_path&#125;/<span class="variable">$</span>&#123;file_base_name&#125;\&quot;</span> &amp; <span class="type">pause</span>\<span class="string">&quot;&quot;</span></span><br><span class="line">    &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>ubuntu配置如下：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;encoding&quot;</span>: <span class="string">&quot;utf-8&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;working_dir&quot;</span>: <span class="string">&quot;$file_path&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;shell_cmd&quot;</span>: <span class="string">&quot;g++ \&quot;$file_name\&quot; -o \&quot;$file_base_name\&quot;&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;file_regex&quot;</span>: <span class="string">&quot;^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;selector&quot;</span>: <span class="string">&quot;source.c++&quot;</span>,</span><br><span class="line"> </span><br><span class="line">    <span class="attr">&quot;variants&quot;</span>: </span><br><span class="line">    [</span><br><span class="line">        &#123;    </span><br><span class="line">        <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Run&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;shell_cmd&quot;</span>: <span class="string">&quot;g++ &#x27;$file&#x27; -o &#x27;$file_base_name&#x27; &amp;&amp; gnome-terminal -x bash -c \&quot;&#x27;$&#123;file_path&#125;/$&#123;file_base_name&#125;&#x27;;read -p &#x27;\nPress any key to continue...&#x27;\&quot;&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/02/26/sublime-text%E9%85%8D%E7%BD%AEg-%E7%BC%96%E8%AF%91/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-git-reset-回溯版本" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -677,85 +754,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/11/14/%E6%AF%95%E4%B8%9A%E5%8D%8A%E5%B9%B4/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-花式撩妹之糗百段子推送" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/08/%E8%8A%B1%E5%BC%8F%E6%92%A9%E5%A6%B9%E4%B9%8B%E7%B3%97%E7%99%BE%E6%AE%B5%E5%AD%90%E6%8E%A8%E9%80%81/">花式撩妹之糗百段子推送</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/08/%E8%8A%B1%E5%BC%8F%E6%92%A9%E5%A6%B9%E4%B9%8B%E7%B3%97%E7%99%BE%E6%AE%B5%E5%AD%90%E6%8E%A8%E9%80%81/" class="archive-article-date">
-  	<time datetime="2017-11-08T12:21:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>首先，撩妹是一件很。。有必要的事情。你想，妹纸，放在那里，你不撩，指不定哪天就跑了。</p>
-<p>但是，你要有手段，撩妹的含义是什么？是让妹纸开心。这个世界上能让人开心的东西很多，比如：money。假如你每天给妹纸发个红包，她肯定开心的不得了啊(土豪妹纸无视我)。但这不是我们的重点，很简单，没钱。</p>
-<p>再想一下，前面说了，这个世界上能让人开心的东西有很多，今天我们选择最便捷的一种—笑话，笑话这个东西吧，你没有幽默感很难想出来，你不可能每天编一个笑话发给你老婆，这不现实。但是我们可以爬，对吧，比如，国内比较知名的糗事百科。</p>
-<p>好了，思路很明确了，逗妹纸开心–&gt;笑话–&gt;糗事百科–&gt;爬虫爬取–&gt;微信推送。那么，开始干活吧。</p>
-        
-          <a class="article-more-a" href="/2017/11/08/%E8%8A%B1%E5%BC%8F%E6%92%A9%E5%A6%B9%E4%B9%8B%E7%B3%97%E7%99%BE%E6%AE%B5%E5%AD%90%E6%8E%A8%E9%80%81/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/08/%E8%8A%B1%E5%BC%8F%E6%92%A9%E5%A6%B9%E4%B9%8B%E7%B3%97%E7%99%BE%E6%AE%B5%E5%AD%90%E6%8E%A8%E9%80%81/">展开全文 >></a>
         </p>
       
 

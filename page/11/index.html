@@ -143,6 +143,83 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ajaxPOST请求" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/15/ajaxPOST%E8%AF%B7%E6%B1%82/">ajax请求struts2之POST</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/15/ajaxPOST%E8%AF%B7%E6%B1%82/" class="archive-article-date">
+  	<time datetime="2017-03-15T05:01:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>昨天做到删除模块，想要实现的功能是这样的：<br><img src="/.com//1.png" alt="1"></p>
+<p>点击删除按钮后实现后台数据库的删除功能，前端视觉上的删除很简单，jQuery提供remove()函数，直接调用一下就好了，但是后台怎么删除？有很多方式，这里采用ajax提交数据。</p>
+        
+          <a class="article-more-a" href="/2017/03/15/ajaxPOST%E8%AF%B7%E6%B1%82/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/15/ajaxPOST%E8%AF%B7%E6%B1%82/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-jQuery伪删除" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -658,84 +735,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/03/07/%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-工厂模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/06/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">模式的艺术:工厂模式</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/06/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2017-03-06T12:25:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在面向对象编程中, 最通常的方法是一个new操作符产生一个对象实例,new操作符就是用来构造对象实例的。但是在一些情况下, new操作符直接生成对象会带来一些问题。<strong>举例来说, 许多类型对象的创造需要一系列的步骤: 你可能需要计算或取得对象的初始设置; 选择生成哪个子对象实例; 或在生成你需要的对象之前必须先生成一些辅助功能的对象(比如说我们要一个汽车对象，我们可能需要创建一些别的对象诸如轮子啦玻璃啦来辅助汽车的创建)。</strong> 在这些情况,新对象的建立就是一个 “过程”，不仅是一个操作，像一部大机器中的一个齿轮传动。</p>
-<p><strong>模式的问题</strong>：你如何能轻松方便地构造对象实例，而不必关心构造对象实例的细节和复杂过程呢？</p>
-<p>解决方案：建立一个工厂来创建对象(我理解的就是把创建的对象的过程封装起来只提供一个方法供外部使用)</p>
-        
-          <a class="article-more-a" href="/2017/03/06/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/06/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">展开全文 >></a>
         </p>
       
 
