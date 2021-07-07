@@ -143,82 +143,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-SQL语句-基础向" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/05/SQL%E8%AF%AD%E5%8F%A5-%E5%9F%BA%E7%A1%80%E5%90%91/">SQL查询语句(基础向)</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/05/SQL%E8%AF%AD%E5%8F%A5-%E5%9F%BA%E7%A1%80%E5%90%91/" class="archive-article-date">
-  	<time datetime="2017-04-05T09:45:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>数据库是后台开发人员必备的技能，SQL又称结构化查询语言，数据库无外乎增删查改，增删改模式基本固定，然后查询语句是一门大学问，写法更是千变万化，其中奥妙，还要慢慢体会。</p>
-        
-          <a class="article-more-a" href="/2017/04/05/SQL%E8%AF%AD%E5%8F%A5-%E5%9F%BA%E7%A1%80%E5%90%91/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">数据库</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/05/SQL%E8%AF%AD%E5%8F%A5-%E5%9F%BA%E7%A1%80%E5%90%91/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-假期" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -729,6 +653,80 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/03/30/CSS%E9%80%89%E6%8B%A9%E5%99%A8%E4%BC%98%E5%85%88%E7%BA%A7/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-getVSpost" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/27/getVSpost/">表单提交中get和post的区别</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/27/getVSpost/" class="archive-article-date">
+  	<time datetime="2017-03-27T05:10:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.get是从服务器上<strong>获取数据</strong>，post是向服务器<strong>传送数据</strong>。<br>2.get是把参数数据队列加到提交表单的action属性所指的URL中，值和表单内各个字段一一对应，<strong>在URL中可以看到</strong>(不安全)。post是通过HTTPpost机制，将表单内各个字段与其内容放置在HTML HEADER内一起传送到ACTION属性所指的URL地址,用户看不到这个过程(安全)。<br>3.对于get方式，服务器端用Request.QueryString获取变量的值，对于post方式，服务器端用Request.Form获取提交的数据。<br>4.get传送的数据量较小，<strong>不能大于2KB</strong>。post传送的数据量较大，<strong>一般被默认为不受限制</strong>。但理论上，IIS4中最大量为80KB，IIS5中为100KB。<br>5.get安全性非常低，post安全性较高。<br>6.get效率高，post效率低.</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/27/getVSpost/">展开全文 >></a>
         </p>
       
 
