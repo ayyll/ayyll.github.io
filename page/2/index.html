@@ -143,6 +143,83 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-base64编解码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/10/base64%E7%BC%96%E8%A7%A3%E7%A0%81/">base64编解码</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/10/base64%E7%BC%96%E8%A7%A3%E7%A0%81/" class="archive-article-date">
+  	<time datetime="2018-03-10T09:49:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>突然发现V2上的人留联系方式都是base64加密的，看着挺好玩，好神秘的样子。搜了一下，大概就是一种编码方式，linux下编解码方式如下：</p>
+<p>加密：</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo <span class="string">&quot;786676907&quot;</span> | base<span class="number">64</span> </span><br><span class="line">输出：<span class="symbol">Nzg2</span><span class="symbol">Njc2</span>OTA<span class="number">3</span>Cg==</span><br></pre></td></tr></table></figure>
+<p>解密：</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo <span class="string">&quot;Nzg2Njc2OTA3Cg==&quot;</span> <span class="string">| base64 -d</span></span><br><span class="line">输出：<span class="number">786676907</span></span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/10/base64%E7%BC%96%E8%A7%A3%E7%A0%81/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-sublime-text配置g-编译" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -676,84 +753,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/12/01/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%8F%B0%E5%BC%8F%E6%9C%BA%E5%AE%89%E8%A3%85ubuntu%E7%BB%8F%E5%8E%86/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-毕业半年" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/14/%E6%AF%95%E4%B8%9A%E5%8D%8A%E5%B9%B4/">毕业半年了,你为什么还是那么菜?</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/14/%E6%AF%95%E4%B8%9A%E5%8D%8A%E5%B9%B4/" class="archive-article-date">
-  	<time datetime="2017-11-14T12:28:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>转瞬间，离开校园已小半年，脑海中似乎还记得顶着烈日拍毕业照的情形，其实，我本不是怀旧的人呀。如今，已然入冬。</p>
-<p>那天，偶然在办公室看到一个电子秤，站上去差点吓到自己，又胖了？(不过女生果然一样，就像我至今闹不明白xll的具体体重一样，恐怕wcy小姐姐的体重也会是一个谜了)，似乎，人生中有三件事，永远实现不了：<strong>今晚学习，坚持减肥，再也不打游戏了</strong>。假如你是一个胖子，你如果能坚持减肥，我服。</p>
-<p>最近总是隐隐觉着目前生活状态不好，好多计划做了白做，执行力极差，每天下班都想着学技术学技术，可打开门就看直播去了；说了不吃饭减肥不吃饭减肥，妈的在公交车上就把外卖定了；这周末一定不打游戏了周末一定不打。。游戏了，等等，最后一次？说好的运动锻炼，现在还摸不清健身房的门朝哪开；</p>
-<p>你都那么菜了，怎么还不努力呢？某天老大说，别看你们一天写那么多代码，看看人家谷歌的代码，一天天的净写垃圾代码。扎心了。回头一想，这么多年，似乎把主流编程语言糟蹋了个遍，为什么你的star少的可伶？因为你写的都是垃圾代码啊。</p>
-<p>写到这又差点忍不住要给自己写计划了，so，晚安。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/14/%E6%AF%95%E4%B8%9A%E5%8D%8A%E5%B9%B4/">展开全文 >></a>
         </p>
       
 

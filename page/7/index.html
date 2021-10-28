@@ -143,6 +143,82 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-springmvc拦截器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/30/springmvc%E6%8B%A6%E6%88%AA%E5%99%A8/">springmvc拦截器</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/30/springmvc%E6%8B%A6%E6%88%AA%E5%99%A8/" class="archive-article-date">
+  	<time datetime="2017-04-30T11:54:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在实际开发中，我们经常需要对请求进行拦截，以判断该请求是否是一个合法的请求，对于jsp，可以采用过滤器进行拦截，而对于普通的请求或者是do请求还是action请求什么乱七八糟的，可以使用SpringMVC提供的拦截器,SpringMVC中的Interceptor 拦截请求是通过HandlerInterceptor来实现的。在SpringMVC 中定义一个Interceptor非常简单，主要有两种方式，第一种方式是要定义的Interceptor类要实现了Spring的HandlerInterceptor接口,或者是这个类继承实现了HandlerInterceptor接口的类，<strong>比如Spring已经提供的实现了HandlerInterceptor接口的抽象类HandlerInterceptorAdapter</strong>；第二种方式是实现Spring的WebRequestInterceptor接口，或者是继承实现了WebRequestInterceptor的类。</p>
+        
+          <a class="article-more-a" href="/2017/04/30/springmvc%E6%8B%A6%E6%88%AA%E5%99%A8/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/30/springmvc%E6%8B%A6%E6%88%AA%E5%99%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-springmvc文件上传" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -649,82 +725,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/04/15/springmvc%E8%A7%A3%E5%86%B3GET%E8%AF%B7%E6%B1%82%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-自定义alert" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/14/%E8%87%AA%E5%AE%9A%E4%B9%89alert/">自定义alert之模态框</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/14/%E8%87%AA%E5%AE%9A%E4%B9%89alert/" class="archive-article-date">
-  	<time datetime="2017-04-14T10:44:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>突然觉着浏览器自带的alert()警告框很丑，然后找了个bootstrap封装的模态框，稍稍改造了一下，勉强好看点了。当然模态框用处很多，可以当登陆注册页面啦，以及一些乱七八糟的东西。下面分析一下如何改造成弹出框。</p>
-        
-          <a class="article-more-a" href="/2017/04/14/%E8%87%AA%E5%AE%9A%E4%B9%89alert/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/14/%E8%87%AA%E5%AE%9A%E4%B9%89alert/">展开全文 >></a>
         </p>
       
 
